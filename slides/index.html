@@ -4,13 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Node &amp; Express in 60 Minutes</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Node and Express in 60 Minutes">
+		<meta name="author" content="Tim Richards">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-status-bar-style"
+				  content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
@@ -42,7 +43,9 @@
 			<div class="slides">
 
 				<section>
-					<h1>WebDev w/ Node &amp; Express in 60 Minutes</h1>
+					<h1>Web Development</h1>
+					<h3>With Node &amp; Express</h2>
+					<h1>In 60 Minutes</h1>
 					<h3>A Hands on Workshop</h3>
 					<p>
 						<small>
@@ -56,6 +59,472 @@
 					</p>
 				</section>
 
+				<section>
+					<section>
+						<h1>Part -1</h1>
+						<h2>Welcome &amp; Introduction</h2>
+					</section>
+
+					<section>
+						<h2>What is the web?</h2>
+						<img src="http://static.techspot.com/articles-info/788/images/world-wide-web-25-years-super.jpg" alt="" /><br>
+						<small><a href="http://www.techspot.com/article/788-world-wide-web-25-year-timeline/">TechSpot</a></small>
+					</section>
+
+					<section>
+						<h2>What is web development?</h2>
+						<img width="75%" src="http://webmarketflorida.com/wp-content/uploads/2015/04/Dollarphotoclub_491047101.jpg" alt="" /><br>
+						<small>Orlando Web Development</small>
+					</section>
+
+					<section>
+						<h2>What is a web application?</h2>
+						<img width="60%" src="http://www.attunity.com/sites/default/files/blog-ara-webbased.jpg" alt="" /><br>
+						<small><a href="http://www.attunity.com/blog/ara-particularly-beneficial-web-application-ecosystem">ATTUNITY</a></small>
+					</section>
+
+					<section>
+						<h2>Web Application Architecture</h2>
+						<img src="http://homepages.uel.ac.uk/u0315352/Client%20Server%20communication.GIF" alt="" /><br>
+						<small>homepages.uel.ac.uk/u0315352</small>
+					</section>
+
+					<section>
+						<h2>What is a URL?</h2>
+						<img src="http://www.seopearl.com/internet-web-technologies/module4/images/urlparts.gif" alt="" /><br>
+						<small><a href="http://www.seopearl.com/internet-web-technologies/module4/uniform-resource-locator.php">SEOPearl</a></small>
+					</section>
+
+					<section>
+						<h2>What is HTTP?</h2>
+						<img src="https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/images/HTTP.png" alt="" /><br>
+						<small><a href="https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html">www3.ntu.edu.sg</a></small>
+					</section>
+
+					<section>
+						<h2>What is Node.js &amp; Express?</h2>
+						<img src="https://prismic-io.s3.amazonaws.com/modulus/60236f61b1eff74bc543d820f66865d183abc42e.png" alt="" /><br>
+						<small><a href="http://blog.modulus.io/nodejs-and-express-create-rest-api">blog.modulus.io</a></small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Part 0</h1>
+						<h2>Installing Node &amp; Npm</h2>
+					</section>
+
+					<section>
+						<h2>Installing Node</h2>
+						<p>Download the latest (stable) version of Node.js.</p>
+						<p><a href="https://nodejs.org">https://nodejs.org</a></p>
+						<p>This will install two <u>important tools</u>:</p>
+						<ul>
+							<li><i>node</i> - the node application</li>
+							<li><i>npm</i> - the node package manager</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Part 1</h1>
+						<h2>A Static Web Application</h2>
+					</section>
+
+					<section>
+						<h2>Create a new folder for your web application</h2>
+						<pre><code data-trim contenteditable>
+							> mkdir hackholyoke
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Create More Folders...</h2>
+						<p>Create the following folders inside your project folder:</p>
+						<ul>
+							<li>hackholyoke/public</li>
+							<li>hackholyoke/public/img</li>
+						</ul> <br><br>
+
+						<pre><code data-trim contenteditable>
+							> mkdir -p hackholyoke/public/img
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Install Express</h2>
+						<p>From the command line, go into your <i>hackholyoke</i> folder.</p>
+
+						<p>Run the following command:</p>
+						<pre><code data-trim contenteditable>
+							> npm install express
+						</code></pre><br><br>
+
+						<small>You must be connected to the web to do this...</small>
+					</section>
+
+					<section>
+						<h2>Grab an Image</h2>
+						<p>
+							Download an image from the web <br>
+							Put it in your <i>public/img</i> directory.<br>
+							Rename it to <i>mypic.jpg</i>.
+						</p>
+						<p>
+							<small>This is a nice one:</small>
+						</p>
+						<img width="20%" src="http://www.newyorker.com/wp-content/uploads/2014/08/Stokes-Hello-Kitty2-1200.jpg" alt="" />
+					</section>
+
+					<section>
+						<h2>Create an HTML document</h2>
+						<p>
+							Next, you need to create a resource that your web application
+							can serve to connected browsers.
+						</p>
+						<p>
+							Using your favorite text editor create a new file called
+							<i>index.html</i> in your <i>public</i> directory. You should
+							add the following content to this file:
+						</p>
+						<small>
+							<a href="https://github.com/timdrichards/node-express-in-60/blob/part1/public/index.html">
+								https://github.com/timdrichards/node-express-in-60/blob/part1/public/index.html
+							</a>
+						</small>
+					</section>
+
+					<section>
+						<h2>Create an Express Application</h2>
+						<p>
+							Now, we need to create an Express application that will
+							respond to HTTP requests from a browser and serve your
+							HTML document to your browser.
+						</p>
+						<p>
+							Using your favorite text editor create a new file called
+							<i>app.js</i> in your <i>hackholyoke</i> directory. You should
+							add the following content to this file:
+						</p>
+						<small>
+							<a href="https://github.com/timdrichards/node-express-in-60/blob/part1/app.js">
+								https://github.com/timdrichards/node-express-in-60/blob/part1/app.js
+							</a>
+						</small>
+					</section>
+
+					<section>
+						<h2>Booting it Up!</h2>
+						<p>
+							Now, you need to run your express application. Do this:
+						</p>
+						<pre><code data-trim contenteditable>
+							> node app.js
+						</code></pre>
+						<p><img width="20%" src="http://tollberghomes.net/wp/wp-content/uploads/2015/06/congratulations_011.jpg" alt="" /></p>
+						<p>
+							<small>
+							Congratulations! You just created your first express
+							application! Go ahead, take it for a spin:
+							</small>
+						</p>
+						<p>
+							<a href="http://localhost:3000">http://localhost:3000</a>
+						</p>
+						<p>
+							<small>
+							After you do this take 30 second to celebrate your achievements!
+							</small>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Part 2</h1>
+						<h2>A Dynamic Web Application</h2>
+					</section>
+
+					<section>
+						<h2>Dynamic Content</h2>
+						<p>
+							Ok, so you created your first express application.<br>
+							Web applications are most interesting when they involve
+							<i>dynamic generation of content</i>.
+						</p>
+					</section>
+
+					<section>
+						<h2>Routes</h2>
+						<p>
+							Express allows you to intercept <i>paths</i> in your
+							URL and handle them in JavaScript.
+						</p>
+						<p>
+							These <i>paths</i> are knows as <i>routes</i>.
+						</p>
+						<p>
+							The code that handles these <i>routes</i> are called
+							<i>route handlers</i>.
+						</p>
+					</section>
+
+					<section>
+						<h2>Route Handler Example</h2>
+						<pre><code data-trim contenteditable>
+function handler(req, res) {
+  var html = '';
+  html += '<html>;';
+  html += '<body>';
+  html += '<h2>Welcome to Dynamic HackHolyoke!</h2>;';
+  html += '<img width="50%" src="img/mypic.jpg"/>';
+  html += '</body>;';
+  html += '</html>;';
+  res.send(html);
+}
+
+app.get('/example', handler);
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Dynamically Generating Example</h2>
+						<p>
+							Let us extend our application <br> to dynamically generate
+							content.
+						</p>
+						<p>
+							We will add a route that will display your image <i>k</i>
+							times <br> when you visit your application in your browser <br> for
+							the <i>k<sup>th</sup></i> time.
+						</p>
+					</section>
+
+					<section>
+						<h2>Creating a Dynamic Route</h2>
+						<ul>
+							<li>Open the <code>app.js</code> file.</li>
+							<li>Add the content labeled <i>ADDITION</i> in the <code>app.js</code> file.
+								<p>
+									<small>
+									<a href="https://github.com/timdrichards/node-express-in-60/blob/part2/app.js">
+										https://github.com/timdrichards/node-express-in-60/blob/part2/app.js
+									</a>
+									</small>
+								</p>
+							</li>
+							<li>Now, take it for a spin!
+								<p>
+									<small>
+										<a href="http://localhost:3000/times">http://localhost:3000/times</a>
+									</small>
+								</p>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Part 3</h1>
+						<h2>Server-Side Templates</h2>
+					</section>
+
+					<section>
+						<h2>HTML in JS == Yuck!</h2>
+						<ul>
+							<li>Ok, so you created your first dynamic express app.
+								<p style="font-size: 75%; color: red">
+									But, having HTML inside your JavaScript code is ugly
+									and hard to maintain. We want to externalize our HTML
+									into a file that is easier to edit and extend without
+									modifying our routes.
+								</p>
+							</li>
+							<li>Server-side templates to the rescue!
+								<p style="font-size: 75%; color: green">
+									Server-side templates allow you to write HTML outside
+									of your routing code. Your templates will have <i>holes</i>
+									that your route code will fill dynamically. We call these
+									templates <i>views</i>.
+								</p>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Templating with Handlebars</h2>
+						<ul>
+							<li>Handlebars is a templating engine that can be used
+							in Express to <i>render</i> views.</li>
+							<li>Install it like this:
+								<p><pre><code data-trim contenteditable>
+									> npm install express-handlebars
+								</code></pre></p>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Adding Express Middleware</h2>
+						<ul>
+							<li>Express middleware provide additional functionality
+							to the <i>request</i> and <i>response</i> objects</li>
+							<li>Handlebars for Express is middleware that will introduce
+							a <i>render</i> method on the <i>response</i> object allowing
+							handlebars templates to be rendered back to the browser.</li>
+							<li>You add the middleware to your <code>app.js</code> file like this:
+								<p><pre><code data-trim contenteditable>
+var handlebars = require('express-handlebars');
+var view = handlebars.create({ defaultLayout: 'main' });
+app.engine('handlebars', view.engine);
+app.set('view engine', 'handlebars');
+								</code></pre></p>
+							</li>
+							<li>Add the above ADDITIONs to <code>app.js</code>.
+								<small><p>
+									<a href="https://github.com/timdrichards/node-express-in-60/blob/part3/app.js">
+										https://github.com/timdrichards/node-express-in-60/blob/part3/app.js
+									</a>
+								</p></small>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>An App with a View</h2>
+						<ul>
+							<li>Next, we need to add our views.</li>
+							<li>First, create a new directory:
+								<p><pre><code data-trim contenteditable>
+									> mkdir -p views/layouts
+								</code></pre></p>
+							</li>
+							<li style="color: green">This will create both the views
+							and layouts directory.
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>A View with a Layout</h2>
+						<ul>
+							<li>It is often the case that we want to duplicate the
+							same HTML structure across several views.</li>
+							<li>Views often have the same HTML header and body.</li>
+							<li>We can reduce this code duplication and simplify our
+							templates by using a <i>layout</i>.</li>
+							<li>So, create a new file called <code>main.handlebars</code>
+							in the <code>views/layouts</code> directory and copy this into it:
+							<small><p>
+								<a href="https://github.com/timdrichards/node-express-in-60/blob/part3/views/layouts/main.handlebars">
+									https://github.com/timdrichards/node-express-in-60/blob/part3/views/layouts/main.handlebars
+								</a>
+							</p></small>
+						  </li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Your First View</h2>
+						<ul>
+							<li>Now, let us add the actual view.</li>
+							<li>First, download this image into <code>public/img</code>.<br>
+								<img width="10%" src="https://gdc-outwitevil.rhcloud.com/wp-content/uploads/2015/07/Underdog.jpg"/>
+							</li>
+							<li>Now, create a new file called <code>times-view.handlebars</code>
+							in the <code>views</code> directory <br> and copy this into it:
+							<small><p>
+								<a href="https://github.com/timdrichards/node-express-in-60/blob/part3/views/times-view.handlebars">
+									https://github.com/timdrichards/node-express-in-60/blob/part3/views/times-view.handlebars
+								</a>
+							</p></small>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Injecting Your View</h2>
+						<ul>
+							<li>Now, we need to inject values into our view and render it.</li>
+							<li>We can do this with the following additions:
+								<p><pre><code data-trim contenteditable>
+var images = [];
+
+function timesHandler(req, res) {
+  res.render('times-view', {
+    visits: images.length,
+    images: images
+  });
+}
+
+app.get('/times', timesHandler);
+								</code></pre></p>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Different Routes, Same View</h2>
+						<ul>
+							<li>To make this more interesting we will create two additional
+							routes that will remember the images we wanted to see.</li>
+							<li>Here is a route for handling cats:
+								<p><pre><code data-trim contenteditable>
+function timesCatHandler(req, res) {
+  images.push({
+    url: '/img/mypic.jpg',
+    date: new Date()
+  });
+  res.render('times-view', {
+    visits: images.length,
+    images: images
+  });
+}
+
+app.get('/times/cat', timesCatHandler);
+								</code></pre></p>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Different Routes, Same View</h2>
+						<ul>
+							<li>And, here is one for dogs:
+								<p><pre><code contenteditable>
+function timesDogHandler(req, res) {
+  images.push({
+    url: '/img/dog.jpg',
+    date: new Date()
+  });
+  res.render('times-view', {
+    visits: images.length,
+    images: images
+  });
+}
+
+app.get('/times/dog', timesDogHandler);
+								</code></pre></p>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Extending the App</h2>
+						<ul>
+							<li>Now, fill in the rest of the code in <code>app.js</code>.</li>
+							<small><p>
+								<a href="https://github.com/timdrichards/node-express-in-60/blob/part3/app.js">
+									https://github.com/timdrichards/node-express-in-60/blob/part3/app.js
+								</a>
+							</p></small>
+							</li>
+						</ul>
+					</section>
+				</section>
+
 			</div>
 
 		</div>
@@ -64,6 +533,19 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
+		document.addEventListener("DOMContentLoaded", init, false);
+
+		function init() {
+			var cblocks = document.querySelectorAll("pre code");
+
+			if(cblocks.length) {
+				for(var i=0, len=cblocks.length; i<len; i++) {
+					var dom = cblocks[i];
+					var html = dom.innerHTML;
+					html = html.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+					dom.innerHTML = html;
+				}
+			}
 
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
@@ -85,6 +567,8 @@
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+		}
+
 
 		</script>
 
