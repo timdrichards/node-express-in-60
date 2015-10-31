@@ -2,15 +2,9 @@
 
 Node and Express in 60 Minutes
 
-## Part 1: A Static Express App
+## Part 3: Templates and Views
 
-This starter application creates a basic express application that
-serves static resources. It has a single HTML document, an image, and
-an express application using its static middleware to serve the HTML
-document.
-
-* [public/index.html](https://github.com/timdrichards/node-express-in-60/blob/part1/public/index.html)
-* [app.js](https://github.com/timdrichards/node-express-in-60/blob/part1/app.js)
+This third part covers server-side templates using handlebars. We extend the basic app from Part 2 to decouple the HTML generation into an external file and use handlebars Express middleware to support rendering of view templates.
 
 Please see the
 [website](http://timdrichards.github.io/node-express-in-60) for more details.
