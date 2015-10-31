@@ -18,6 +18,8 @@ app.use(express.static(__dirname + '/public'));
 //
 // Go ahead, give it a try!
 //
+// > node app.js
+//
 // Congrats! You just created your first express app!
 //
 app.listen(3000, function () {
