@@ -21,34 +21,22 @@ app.engine('handlebars', view.engine);
 app.set('view engine', 'handlebars');
 //////////////////////////////////////////////////////////////////////
 
-// We will use this to record the number of times the `/times` route
-// has been requested by a browser.
-var visits = 0;
+// ADDITION //////////////////////////////////////////////////////////
+
+// We will use this to record image URLs and dates when they were
+// requested. This is how you create a new Array in JavaScript.
+var images = [];
 
 // The `timesHandler` will handle HTTP requests. It dynamically
 // generates k images, where k is the number of times this route has
 // been requested by a browser.
 function timesHandler(req, res) {
-  // Update the number of visits:
-  visits += 1;
-
-  var html = '<html>';
-  html += '<body>';
-  html += '<h2>Welcome to HackHolyoke ' + visits + ' times!</h2>';
-
-  // Iterate over the number of visits:
-  for (var i = 0; i < visits; i++) {
-    html += '<img width="5%" src="img/mypic.jpg"/>'
-  }
-
-  html += '</body>';
-  html += '</html>';
-
-  // Send the response back to the browser:
-  res.send(html);
+  
 }
 
 app.get('/times', timesHandler);
+
+//////////////////////////////////////////////////////////////////////
 
 // This will run our web server on port 3000 and wait for incoming
 // HTTP requests from the "outside" world. In reality, this is
